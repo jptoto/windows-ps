@@ -78,6 +78,12 @@
         "output": "box/{{.Provider}}/{{user `vm_name`}}.box",
         "type": "vagrant",
         "vagrantfile_template": "vagrantfile-windows.tpl"
+      },
+      {
+        "type": "vagrant-cloud",
+        "box_tag": "jptoto/winsrv2019",
+        "access_token": "{{user `cloud_token`}}",
+        "version": "{{user `version`}}"
       }
     ],    
     "provisioners": [
